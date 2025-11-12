@@ -1,0 +1,19 @@
+import java.util.HashSet;
+import java.util.LinkedHashSet;
+import java.util.Set;
+
+public class InterviewQuestion {
+    public static void main(String[] args) {
+        String input="The cat and The cat of Dog and cat %^ of toll being^&";
+        String cleaned=input.replaceAll("[^a-zA-Z0-9]"," ");
+        System.out.println(cleaned);
+        String[] array=cleaned.split(" ");
+        Set<String> set=new LinkedHashSet<>();
+        for (String output:array)
+        {
+            set.add(output);
+        }
+        String newoutput=String.join("\n",set);
+        System.out.println(newoutput);
+    }
+}
